@@ -43,6 +43,8 @@
 /* End PBXAggregateTarget section */
 
 /* Begin PBXBuildFile section */
+		09076A8D25EA1A3700CB46B4 /* HQPerson+HQA.m in Sources */ = {isa = PBXBuildFile; fileRef = 09076A8C25EA1A3700CB46B4 /* HQPerson+HQA.m */; };
+		09076A9725EA1A4500CB46B4 /* HQPerson+HQB.m in Sources */ = {isa = PBXBuildFile; fileRef = 09076A9625EA1A4500CB46B4 /* HQPerson+HQB.m */; };
 		091F8B7625B73EA000A95CAF /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 091F8B7525B73EA000A95CAF /* main.m */; };
 		091F8B8325B73EBC00A95CAF /* HQPerson.m in Sources */ = {isa = PBXBuildFile; fileRef = 091F8B8225B73EBC00A95CAF /* HQPerson.m */; };
 		091F8B8D25B73F6D00A95CAF /* libobjc.A.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = D2AAC0630554660B00DB518D /* libobjc.A.dylib */; };
@@ -222,6 +224,10 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		09076A8B25EA1A3700CB46B4 /* HQPerson+HQA.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "HQPerson+HQA.h"; sourceTree = "<group>"; };
+		09076A8C25EA1A3700CB46B4 /* HQPerson+HQA.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "HQPerson+HQA.m"; sourceTree = "<group>"; };
+		09076A9525EA1A4500CB46B4 /* HQPerson+HQB.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "HQPerson+HQB.h"; sourceTree = "<group>"; };
+		09076A9625EA1A4500CB46B4 /* HQPerson+HQB.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "HQPerson+HQB.m"; sourceTree = "<group>"; };
 		091F8B2B25B73B0700A95CAF /* HQCommon */ = {isa = PBXFileReference; lastKnownFileType = folder; path = HQCommon; sourceTree = "<group>"; };
 		091F8B7325B73EA000A95CAF /* HQObjc */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = HQObjc; sourceTree = BUILT_PRODUCTS_DIR; };
 		091F8B7525B73EA000A95CAF /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
@@ -468,6 +474,10 @@
 				091F8B7525B73EA000A95CAF /* main.m */,
 				091F8B8125B73EBC00A95CAF /* HQPerson.h */,
 				091F8B8225B73EBC00A95CAF /* HQPerson.m */,
+				09076A8B25EA1A3700CB46B4 /* HQPerson+HQA.h */,
+				09076A8C25EA1A3700CB46B4 /* HQPerson+HQA.m */,
+				09076A9525EA1A4500CB46B4 /* HQPerson+HQB.h */,
+				09076A9625EA1A4500CB46B4 /* HQPerson+HQB.m */,
 			);
 			path = HQObjc;
 			sourceTree = "<group>";
@@ -876,7 +886,9 @@
 			buildActionMask = 2147483647;
 			files = (
 				091F8B7625B73EA000A95CAF /* main.m in Sources */,
+				09076A8D25EA1A3700CB46B4 /* HQPerson+HQA.m in Sources */,
 				091F8B8325B73EBC00A95CAF /* HQPerson.m in Sources */,
+				09076A9725EA1A4500CB46B4 /* HQPerson+HQB.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -993,11 +1005,13 @@
 				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
 				CODE_SIGN_STYLE = Automatic;
 				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
 				GCC_C_LANGUAGE_STANDARD = gnu11;
 				GCC_DYNAMIC_NO_PIC = NO;
 				GCC_PREPROCESSOR_DEFINITIONS = (
 					"DEBUG=1",
 					"$(inherited)",
+					__APPLE_BLEACH_SDK__,
 				);
 				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;

@@ -1479,6 +1479,17 @@ static void methodizeClass(Class cls, Class previously)
     auto rw = cls->data();
     auto ro = rw->ro();
     auto rwe = rw->ext();
+    
+    const char *mangledName  = cls->mangledName();
+    const char *HQPersonName = "HQPerson";
+
+    if (strcmp(mangledName, HQPersonName) == 0) {
+        auto kc_ro = (const class_ro_t *)cls->data();
+        auto isMeta = kc_ro->flags & RO_META;
+        if(!isMeta){
+            printf("%s: 这个是我要研究的 %s \n",__func__,HQPersonName);
+        }
+    }
 
     // Methodizing for the first time
     if (PrintConnecting) {
