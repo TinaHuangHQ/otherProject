@@ -58,19 +58,20 @@
     
     //自定义KVC
     {
-//        HQPersonSetValue* person = [[HQPersonSetValue alloc] init];
+        HQPersonSetValue* person = [[HQPersonSetValue alloc] init];
 //        [person hq_setValue:@"123" forKey:@"name"];
-//        NSLog(@"_testName = %@", person->_testName);
-//
-//        NSLog(@"_name = %@", person->_name);
-//        NSLog(@"_isName = %@", person->_isName);
-//        NSLog(@"name = %@", person->name);
-//        NSLog(@"isName = %@", person->isName);
+        [person hq_setValue:nil forKey:@"name"];
+        NSLog(@"_testName = %@", person->_testName);
+
+        NSLog(@"_name = %@", person->_name);
+        NSLog(@"_isName = %@", person->_isName);
+        NSLog(@"name = %@", person->name);
+        NSLog(@"isName = %@", person->isName);
         
-        HQPersonGetValue* person = [[HQPersonGetValue alloc] init];
-        id value = [person hq_valueForKey:@"name"];
-        NSLog(@"type: %@", NSStringFromClass([value class]));
-        NSLog(@"value = %@", value);
+//        HQPersonGetValue* person = [[HQPersonGetValue alloc] init];
+//        id value = [person hq_valueForKey:@"name"];
+//        NSLog(@"type: %@", NSStringFromClass([value class]));
+//        NSLog(@"value = %@", value);
         
     }
     NSLog(@"end");
