@@ -7,6 +7,9 @@
 
 #import "ViewController.h"
 #import "Person.h"
+#import "Department.h"
+#import "PersonSwizzling.h"
+#import "Human.h"
 
 @interface ViewController ()
 
@@ -46,14 +49,32 @@
     
     //依赖属性KVO
     {
-        Person* person = [Person new];
-        person.firstName = @"hello";
-        person.lastName = @"world";
-        NSLog(@"full name:%@",person.fullName);
-        [person setFirstName:@"hi"];
-        NSLog(@"full name:%@",person.fullName);
-        [person setLastName:@"human"];
-        NSLog(@"full name:%@",person.fullName);
+//        Person* person = [Person new];
+//        person.firstName = @"hello";
+//        person.lastName = @"world";
+//        NSLog(@"full name:%@",person.fullName);
+//        [person setFirstName:@"hi"];
+//        NSLog(@"full name:%@",person.fullName);
+//        [person setLastName:@"human"];
+//        NSLog(@"full name:%@",person.fullName);
+    }
+    
+    //依赖属性KVO
+    {
+//        Department* department = [[Department alloc] init];
+//        NSLog(@"total = %@",department.totalSalary);
+//        [department add];
+//        NSLog(@"total = %@",department.totalSalary);
+//        [department remove];
+//        NSLog(@"total = %@",department.totalSalary);
+//        [department replace];
+//        NSLog(@"total = %@",department.totalSalary);
+    }
+    
+    //自定义KVO
+    {
+        Human* person = [[Human alloc] init];
+        person.selfName = @"123";
     }
 }
 

@@ -6,16 +6,19 @@
 //
 
 #import "Person.h"
+#import <objc/runtime.h>
 
 @implementation Person
+
 
 - (instancetype)init{
     self = [super init];
     if (self) {
         NSLog(@"注册观察者");
         self.arr = [@[@1, @2, @3, @4, @5] mutableCopy];
-        [self addObserver:self forKeyPath:@"name" options:(NSKeyValueObservingOptionNew) context:@"ToOne"];
+        [self addObserver:self forKeyPath:@"name" options:(NSKeyValueObservingOptionNew) context:nil];
         [self addObserver:self forKeyPath:@"arr" options:(NSKeyValueObservingOptionNew) context:@"ToMany"];
+        NSLog(@"注册观察者完成");
     }
     return self;
 }
@@ -33,7 +36,7 @@
 
 //+ (NSSet *)keyPathsForValuesAffectingValueForKey:(NSString *)key {
 //    NSSet *keyPaths = [super keyPathsForValuesAffectingValueForKey:key];
-// 
+//
 //    if ([key isEqualToString:@"fullName"]) {
 //        NSArray *affectingKeys = @[@"lastName", @"firstName"];
 //        keyPaths = [keyPaths setByAddingObjectsFromArray:affectingKeys];
@@ -41,8 +44,16 @@
 //    return keyPaths;
 //}
 
-+ (NSSet *)keyPathsForValuesAffectingFullName {
-    return [NSSet setWithObjects:@"lastName", @"firstName", nil];
+//+ (NSSet *)keyPathsForValuesAffectingFullName {
+//    return [NSSet setWithObjects:@"lastName", @"firstName", nil];
+//}
+
++ (NSSet<NSString *> *)keyPathsForValuesAffectingValueForKey:(NSString *)key{
+    NSSet *keyPaths = [super keyPathsForValuesAffectingValueForKey:key];
+    if ([key isEqualToString:@"fullName"]) {
+        keyPaths = [NSSet setWithObjects:@"lastName", @"firstName", nil];
+    }
+    return keyPaths;
 }
 
 //当automaticallyNotifiesObserversForKey 为NO 时，自动触发KVO
@@ -67,7 +78,7 @@
 
 - (void)dealloc{
     NSLog(@"移除观察者");
-    [self removeObserver:self forKeyPath:@"name" context:@"ToOne"];
+    [self removeObserver:self forKeyPath:@"name" context:nil];
     [self removeObserver:self forKeyPath:@"arr" context:@"ToMany"];
 }
 

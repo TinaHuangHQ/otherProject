@@ -15,6 +15,12 @@
 		52CF7B34260320DF0026C760 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 52CF7B32260320DF0026C760 /* LaunchScreen.storyboard */; };
 		52CF7B37260320DF0026C760 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 52CF7B36260320DF0026C760 /* main.m */; };
 		52CF7B402603213A0026C760 /* Person.m in Sources */ = {isa = PBXBuildFile; fileRef = 52CF7B3F2603213A0026C760 /* Person.m */; };
+		52CF7B4726043E1A0026C760 /* Department.m in Sources */ = {isa = PBXBuildFile; fileRef = 52CF7B4626043E1A0026C760 /* Department.m */; };
+		52CF7B4B26043E260026C760 /* Employee.m in Sources */ = {isa = PBXBuildFile; fileRef = 52CF7B4A26043E260026C760 /* Employee.m */; };
+		52CF7B5726048B120026C760 /* PersonSwizzling.m in Sources */ = {isa = PBXBuildFile; fileRef = 52CF7B5626048B120026C760 /* PersonSwizzling.m */; };
+		52CF7B5B260492250026C760 /* NSObject+HQKVO.m in Sources */ = {isa = PBXBuildFile; fileRef = 52CF7B5A260492250026C760 /* NSObject+HQKVO.m */; };
+		52CF7B5F26049A2A0026C760 /* HQKVOInfo.m in Sources */ = {isa = PBXBuildFile; fileRef = 52CF7B5E26049A2A0026C760 /* HQKVOInfo.m */; };
+		52CF7B6D2604B1CF0026C760 /* Human.m in Sources */ = {isa = PBXBuildFile; fileRef = 52CF7B6C2604B1CF0026C760 /* Human.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -32,6 +38,18 @@
 		52CF7B36260320DF0026C760 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		52CF7B3E2603213A0026C760 /* Person.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Person.h; sourceTree = "<group>"; };
 		52CF7B3F2603213A0026C760 /* Person.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = Person.m; sourceTree = "<group>"; };
+		52CF7B4526043E1A0026C760 /* Department.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Department.h; sourceTree = "<group>"; };
+		52CF7B4626043E1A0026C760 /* Department.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = Department.m; sourceTree = "<group>"; };
+		52CF7B4926043E260026C760 /* Employee.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Employee.h; sourceTree = "<group>"; };
+		52CF7B4A26043E260026C760 /* Employee.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = Employee.m; sourceTree = "<group>"; };
+		52CF7B5526048B120026C760 /* PersonSwizzling.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = PersonSwizzling.h; sourceTree = "<group>"; };
+		52CF7B5626048B120026C760 /* PersonSwizzling.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = PersonSwizzling.m; sourceTree = "<group>"; };
+		52CF7B59260492250026C760 /* NSObject+HQKVO.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "NSObject+HQKVO.h"; sourceTree = "<group>"; };
+		52CF7B5A260492250026C760 /* NSObject+HQKVO.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "NSObject+HQKVO.m"; sourceTree = "<group>"; };
+		52CF7B5D26049A2A0026C760 /* HQKVOInfo.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = HQKVOInfo.h; sourceTree = "<group>"; };
+		52CF7B5E26049A2A0026C760 /* HQKVOInfo.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = HQKVOInfo.m; sourceTree = "<group>"; };
+		52CF7B6B2604B1CF0026C760 /* Human.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Human.h; sourceTree = "<group>"; };
+		52CF7B6C2604B1CF0026C760 /* Human.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = Human.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -77,6 +95,18 @@
 				52CF7B36260320DF0026C760 /* main.m */,
 				52CF7B3E2603213A0026C760 /* Person.h */,
 				52CF7B3F2603213A0026C760 /* Person.m */,
+				52CF7B4526043E1A0026C760 /* Department.h */,
+				52CF7B4626043E1A0026C760 /* Department.m */,
+				52CF7B4926043E260026C760 /* Employee.h */,
+				52CF7B4A26043E260026C760 /* Employee.m */,
+				52CF7B5526048B120026C760 /* PersonSwizzling.h */,
+				52CF7B5626048B120026C760 /* PersonSwizzling.m */,
+				52CF7B59260492250026C760 /* NSObject+HQKVO.h */,
+				52CF7B5A260492250026C760 /* NSObject+HQKVO.m */,
+				52CF7B5D26049A2A0026C760 /* HQKVOInfo.h */,
+				52CF7B5E26049A2A0026C760 /* HQKVOInfo.m */,
+				52CF7B6B2604B1CF0026C760 /* Human.h */,
+				52CF7B6C2604B1CF0026C760 /* Human.m */,
 			);
 			path = KVODemo;
 			sourceTree = "<group>";
@@ -154,7 +184,13 @@
 				52CF7B26260320DB0026C760 /* AppDelegate.m in Sources */,
 				52CF7B402603213A0026C760 /* Person.m in Sources */,
 				52CF7B37260320DF0026C760 /* main.m in Sources */,
+				52CF7B5726048B120026C760 /* PersonSwizzling.m in Sources */,
+				52CF7B5B260492250026C760 /* NSObject+HQKVO.m in Sources */,
+				52CF7B6D2604B1CF0026C760 /* Human.m in Sources */,
 				52CF7B29260320DB0026C760 /* SceneDelegate.m in Sources */,
+				52CF7B4726043E1A0026C760 /* Department.m in Sources */,
+				52CF7B4B26043E260026C760 /* Employee.m in Sources */,
+				52CF7B5F26049A2A0026C760 /* HQKVOInfo.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -299,6 +335,7 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = WRLK97WL4U;
+				ENABLE_STRICT_OBJC_MSGSEND = NO;
 				INFOPLIST_FILE = KVODemo/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -317,6 +354,7 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = WRLK97WL4U;
+				ENABLE_STRICT_OBJC_MSGSEND = NO;
 				INFOPLIST_FILE = KVODemo/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
