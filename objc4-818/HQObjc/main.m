@@ -17,6 +17,7 @@ int main(int argc, const char * argv[]) {
         NSLog(@"Hello, World!");
         // 0x00007ffffffffff8ULL
         HQPerson* person = [HQPerson alloc];
+        [person class];
         person.cateName = @"123";
         NSLog(@"%@",person.cateName);
         
