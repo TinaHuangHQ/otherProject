@@ -7,6 +7,7 @@
 
 #import "ViewController.h"
 #import "RSATest.h"
+#import "RSACryptor.h"
 
 @interface ViewController ()
 @property (weak, nonatomic) IBOutlet UISegmentedControl *EncryptKeySegment;
@@ -24,6 +25,26 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     // Do any additional setup after loading the view.
+    
+    //1.加载公钥
+    [[RSACryptor sharedRSACryptor] loadPublicKey:[[NSBundle mainBundle] pathForResource:@"rsacert.der" ofType:nil]];
+    //2.加载私钥
+    [[RSACryptor sharedRSACryptor] loadPrivateKey: [[NSBundle mainBundle] pathForResource:@"p.p12" ofType:nil] password:@"123456"];
+}
+
+static void my_encrypt(){
+    NSData * result = [[RSACryptor sharedRSACryptor] encryptData:[@"hello" dataUsingEncoding:NSUTF8StringEncoding]];
+    //base64编码
+    NSString * base64 = [result base64EncodedStringWithOptions:0];
+    NSLog(@"加密之后:%@\n",base64);
+    
+    //解密
+    NSData * dcStr = [[RSACryptor sharedRSACryptor] decryptData:result];
+    NSLog(@"解密之后:%@",[[NSString alloc] initWithData:dcStr encoding:NSUTF8StringEncoding]);
+}
+
+- (void)touchesBegan:(NSSet<UITouch *> *)touches withEvent:(UIEvent *)event{
+    my_encrypt();
 }
 
 - (void)viewDidAppear:(BOOL)animated{

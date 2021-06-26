@@ -20,6 +20,9 @@
 		52163C5D25899EB000F823F4 /* RSATest.m in Sources */ = {isa = PBXBuildFile; fileRef = 52163C5C25899EB000F823F4 /* RSATest.m */; };
 		52163C612589A1BC00F823F4 /* Utils.m in Sources */ = {isa = PBXBuildFile; fileRef = 52163C602589A1BC00F823F4 /* Utils.m */; };
 		52163C652589A87C00F823F4 /* RSAKey.m in Sources */ = {isa = PBXBuildFile; fileRef = 52163C642589A87C00F823F4 /* RSAKey.m */; };
+		52CF7C0226300C720026C760 /* rsacert.der in Resources */ = {isa = PBXBuildFile; fileRef = 52CF7C0026300C720026C760 /* rsacert.der */; };
+		52CF7C0326300C720026C760 /* p.p12 in Resources */ = {isa = PBXBuildFile; fileRef = 52CF7C0126300C720026C760 /* p.p12 */; };
+		52CF7C0726300CA70026C760 /* RSACryptor.m in Sources */ = {isa = PBXBuildFile; fileRef = 52CF7C0626300CA70026C760 /* RSACryptor.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -150,6 +153,10 @@
 		52163C602589A1BC00F823F4 /* Utils.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = Utils.m; sourceTree = "<group>"; };
 		52163C632589A87C00F823F4 /* RSAKey.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = RSAKey.h; sourceTree = "<group>"; };
 		52163C642589A87C00F823F4 /* RSAKey.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = RSAKey.m; sourceTree = "<group>"; };
+		52CF7C0026300C720026C760 /* rsacert.der */ = {isa = PBXFileReference; lastKnownFileType = file; name = rsacert.der; path = TestRSA/rsacert.der; sourceTree = SOURCE_ROOT; };
+		52CF7C0126300C720026C760 /* p.p12 */ = {isa = PBXFileReference; lastKnownFileType = file; name = p.p12; path = TestRSA/p.p12; sourceTree = SOURCE_ROOT; };
+		52CF7C0526300CA70026C760 /* RSACryptor.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = RSACryptor.h; sourceTree = "<group>"; };
+		52CF7C0626300CA70026C760 /* RSACryptor.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = RSACryptor.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -184,6 +191,8 @@
 		52163BC92588B21300F823F4 /* TestRSA */ = {
 			isa = PBXGroup;
 			children = (
+				52CF7C0126300C720026C760 /* p.p12 */,
+				52CF7C0026300C720026C760 /* rsacert.der */,
 				52163BE42588B25F00F823F4 /* OpenSSL */,
 				52163BCA2588B21300F823F4 /* AppDelegate.h */,
 				52163BCB2588B21300F823F4 /* AppDelegate.m */,
@@ -204,6 +213,8 @@
 				52163C642589A87C00F823F4 /* RSAKey.m */,
 				52163C5F2589A1BC00F823F4 /* Utils.h */,
 				52163C602589A1BC00F823F4 /* Utils.m */,
+				52CF7C0526300CA70026C760 /* RSACryptor.h */,
+				52CF7C0626300CA70026C760 /* RSACryptor.m */,
 			);
 			path = TestRSA;
 			sourceTree = "<group>";
@@ -402,8 +413,10 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				52CF7C0226300C720026C760 /* rsacert.der in Resources */,
 				52163BDA2588B21600F823F4 /* LaunchScreen.storyboard in Resources */,
 				52163BD72588B21600F823F4 /* Assets.xcassets in Resources */,
+				52CF7C0326300C720026C760 /* p.p12 in Resources */,
 				52163BD52588B21300F823F4 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -421,6 +434,7 @@
 				52163C5D25899EB000F823F4 /* RSATest.m in Sources */,
 				52163BCC2588B21300F823F4 /* AppDelegate.m in Sources */,
 				52163BDD2588B21600F823F4 /* main.m in Sources */,
+				52CF7C0726300CA70026C760 /* RSACryptor.m in Sources */,
 				52163C612589A1BC00F823F4 /* Utils.m in Sources */,
 				52163BCF2588B21300F823F4 /* SceneDelegate.m in Sources */,
 			);
